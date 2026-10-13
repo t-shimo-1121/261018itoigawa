@@ -559,8 +559,7 @@ body::before{ /* iPhoneのノッチ／Dynamic Island下の帯 */
 
   /* ── いし鑑定所との連携（同じ github.io なので図鑑データを読める） ── */
   var APP_URL = 'https://t-shimo-1121.github.io/261018ishi-kantei/';
-  var APP_PLACE = '糸魚川の海岸（ヒスイ海岸など）';
-  var appHref = APP_URL + '?place=' + encodeURIComponent(APP_PLACE) + '&from=shiori';
+  var appHref = APP_URL + '?from=shiori';
   [].slice.call(document.querySelectorAll('.js-app')).forEach(function(a){ a.href = appHref; });
   function esc(t){ return String(t==null?'':t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
   function dayOf(t){ var d=new Date(t); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
